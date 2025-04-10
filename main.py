@@ -13,6 +13,10 @@ resolution = (1080, 1080)
 pixels = resolution[0] * resolution[1]
 save_path = r"D:\datos\descargas\image.png"
 
+color0 = (0,0,0,255) # (RGBA) PIXELS THAT REPRESENT 0
+color1 = (255,255,255,255) # (RGBA) PIXELS THAT REPRESENT 1
+color2 = (202, 202, 202, 255) # (RGBA) PIXELS THAT REPRESENT THE BACKGROUND AND SPACES
+
 text = Text.ascii_a_binario("Puto el que lo lea")
 
 text_spaced = ""
@@ -30,5 +34,5 @@ max_res = Pixels.getMaxRes(text_spaced, resolution)
 # print(f"Max res: {max_res} - x:{max_res[0]*max_res[1]} y:{max_res[0]*max_res[2]} - {(resolution[0] * resolution[1])}")
 # print(f"Sobrante - x{resolution[0]-max_res[0]*max_res[1]}, y{resolution[1]-max_res[0]*max_res[2]}")
 
-img: pil_image = Image.makeImage(resolution, (max_res[1], max_res[2]), max_res[0], (0,0,0,255), (255,255,255,255), (202, 202, 202, 255), text_spaced)
+img: pil_image = Image.makeImage(resolution, (max_res[1], max_res[2]), max_res[0], color0, color1, color2, text_spaced)
 img.save(save_path)

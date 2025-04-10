@@ -11,7 +11,7 @@ def makeImage(res: tuple, matriz: tuple, S: int, color0: tuple, color1: tuple, c
     cols, rows = matriz
 
     # Crear imagen en blanco
-    img = pil_image.new("RGBA", (X, Y), (202, 202, 202, 255))
+    img = pil_image.new("RGBA", (X, Y), color2)
     draw = ImageDraw.Draw(img)
 
     fill = random.randint(3, (cols*rows) - len(text))
