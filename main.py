@@ -10,7 +10,6 @@ import Pixels
 import Text
 
 resolution = (1080, 1080)
-pixels = resolution[0] * resolution[1]
 save_path = r"D:\datos\descargas\image.png"
 
 color0 = (0,0,0,255) # (RGBA) PIXELS THAT REPRESENT 0
